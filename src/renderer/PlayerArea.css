@@ -1,0 +1,68 @@
+.player-area {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.position-0 {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  flex-direction: row;
+}
+
+.position-1 {
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  flex-direction: column;
+}
+
+.position-2 {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  flex-direction: row;
+  z-index: 1000;
+}
+
+.position-3 {
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  flex-direction: column;
+}
+
+.player-indicator {
+  font-size: 1.5em;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  position: relative;
+}
+
+.cards-container.row {
+  flex-direction: row;
+  margin-right: -50px;
+}
+
+.cards-container.column {
+  flex-direction: column;
+  margin-bottom: -70px;
+}
+
+.cards-container.row .card,
+.cards-container.column .card {
+  margin: 0;
+}
+
+
+.cards-container.column.overlap .card {
+  margin-bottom: -50px; /* Adjust overlap for vertical cards */
+}
